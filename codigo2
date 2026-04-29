@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float nota, suma = 0, promedio;
+    int aprueban = 0;
+
+    for (int i = 1; i <= 5; i++) {
+        cout << "Ingrese la nota " << i << ": ";
+        cin >> nota;
+
+        suma += nota;
+
+        if (nota >= 7) {
+            aprueban++;
+        }
+    }
+
+    promedio = suma / 5;
+
+    cout << "El promedio es: " << promedio << endl;
+    cout << "Cantidad de notas que aprueban: " << aprueban << endl;
+
+    if (promedio >= 9) {
+        cout << "Excelente" << endl;
+    } else if (promedio >= 7) {
+        cout << "Bueno" << endl;
+    } else {
+        cout << "Regular" << endl;
+    }
+
+    return 0;
+}
